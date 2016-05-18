@@ -19,7 +19,7 @@ public class ProyectoFBYasmin {
        fb.publicarLink();
        fb.buscarNombre();*/
        
-       
+    fb.publicarLink();
        //fb.getPosts();
        //fb.borrarFoto();
        //fb.unLikePublicaciones();

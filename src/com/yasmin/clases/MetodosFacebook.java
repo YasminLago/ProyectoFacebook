@@ -41,14 +41,13 @@ public class MetodosFacebook{
      * @throws MalformedURLException
      * @throws FacebookException 
      */
-    public void publicarLink() throws MalformedURLException, FacebookException{
-        
+    public void publicarLink() throws MalformedURLException, FacebookException{     
         PostUpdate post = new PostUpdate(new URL("http://www.danielcastelao.org/"))
         .picture(new URL("http://www.danielcastelao.org/images/skins/castelao/images/200.jpg"))
         .name("Centro de Formación Profesional Daniel Castelao")
         .caption("danielcastelao.org")
         .description("O centro de formación profesional DANIEL CASTELAO, ubicado en Vigo dende 1976, dispón dunha ampla oferta para alumnos de Formación profesional.");
-    miFacebook.postFeed(post);
+         miFacebook.postFeed(post);   
     }
     
     /**
