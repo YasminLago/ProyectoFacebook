@@ -58,7 +58,6 @@ public class MetodosFacebook{
         User u = null;
         ResponseList <User> results = miFacebook.searchUsers("Yasmin");
         System.out.println("Personas con mi nombre");
-        
             for(int i=0;i<results.size();i++){
                 u = results.get(i);
                 System.out.println(u.getName());
