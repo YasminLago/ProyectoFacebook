@@ -12,7 +12,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- *
+ * Esta clase contiene metodos para realizar acciones sobre Facebook
+ * 
  * @author Yasmín
  */
 public class MetodosFacebook{
@@ -35,7 +36,7 @@ public class MetodosFacebook{
     public void publicarPost() throws FacebookException{ 
        miFacebook.postStatusMessage("Hola"); 
     }
-    
+   
     /**
      * Publicación de links
      * @throws MalformedURLException
@@ -71,16 +72,16 @@ public class MetodosFacebook{
      */
     public void likePublicaciones() throws FacebookException{
         miFacebook.likePhoto("121005474975884");
-        miFacebook.likePost("119363355140096_130811347328630");
+        miFacebook.likePost("119363355140096_131634233913008");
     }
     
     /**
-     * Quita el me gusta de publicaciones
+     * Quita el me gusta de publicaciones propias
      * @throws FacebookException 
      */
     public void unLikePublicaciones() throws FacebookException{
         miFacebook.unlikePhoto("121005474975884");
-        miFacebook.unlikePost("119363355140096_130811347328630");
+        miFacebook.unlikePost("119363355140096_131634233913008");
     }
     
     /**
@@ -88,19 +89,20 @@ public class MetodosFacebook{
      * @throws FacebookException 
      */
     public void comentarPublicacion() throws FacebookException{
-        miFacebook.commentPost("119363355140096_130811347328630", "Hola");
-        
+        miFacebook.commentPost("119363355140096_131634233913008", "Hola");       
     }
     
     /**
      * Obtención de comentarios de una publicación 
-     * @return Muestra los comentarios hechos a esa publicación
      * @throws FacebookException 
      */
-    public ResponseList <Comment> getPostComments() throws FacebookException{
+    public void getPostComments() throws FacebookException{
         ResponseList <Comment> c = null;
-        c = miFacebook.getPostComments("119363355140096_130811347328630");
-        return c;
+        c = miFacebook.getPostComments("119363355140096_131634233913008");
+            for(int i=0;i<c.size();i++){
+                Comment m = c.get(i);
+                System.out.println(m.getMessage());  
+            }       
     }
 }
     

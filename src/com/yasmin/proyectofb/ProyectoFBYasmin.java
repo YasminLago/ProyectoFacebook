@@ -1,6 +1,6 @@
 package com.yasmin.proyectofb;
 
-import com.yasmin.clases.MetodosFacebook;
+import com.yasmin.ventana.InterfazG;
 import facebook4j.FacebookException;
 import java.net.MalformedURLException;
 
@@ -10,22 +10,8 @@ import java.net.MalformedURLException;
  */
 public class ProyectoFBYasmin {
     public static void main(String[] args) throws FacebookException, MalformedURLException{
-       MetodosFacebook fb = new MetodosFacebook();
-       
-       //fb.publicarPost();
-       //fb.buscarTema();
-      /* fb.miInfo();
-       fb.publicarPost();
-       fb.publicarLink();
-       fb.buscarNombre();*/
-       
-    fb.publicarLink();
-       //fb.getPosts();
-       //fb.borrarFoto();
-       //fb.unLikePublicaciones();
-       //fb.publicarPost();
-       //fb.comentarPublicacion();
-       //fb.getPostComments();
+       InterfazG i = new InterfazG();
+       i.setVisible(true);
     }
     
 }
