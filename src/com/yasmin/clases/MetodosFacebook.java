@@ -1,6 +1,5 @@
 package com.yasmin.clases;
 
-
 import facebook4j.Comment;
 import facebook4j.Facebook;
 import facebook4j.FacebookException;
